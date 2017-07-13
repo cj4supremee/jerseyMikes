@@ -1,0 +1,41 @@
+CREATE TABLE store
+(
+store_id varchar(2),
+storeName varchar(20),
+PRIMARY KEY (store_id)
+);
+
+
+CREATE TABLE login
+(
+uname varchar(20),
+password varchar(20)
+PRIMARY KEY (uname)
+);
+
+CREATE TABLE sales
+(
+store_id varchar(2),
+week1 varchar(20),
+week2 varchar(20),
+week3 varchar(20),
+week4 varchar(20),
+week5 varchar(20)
+
+FOREIGN KEY (store_id) REFERENCES store (store_id)
+);
+
+CREATE TABLE employee
+(
+fname varchar(20),
+lname varchar(20),
+position varchar(20),
+salary varchar(20),
+store_id varchar(2),
+FOREIGN KEY (store_id) REFERENCES store (store_id)
+);
+
+insert into store (store_id, storeName) values ('1','Towson');
+insert into login (uname,password) values ('admin','admin');
+insert into sales (store_id,week1,week2,week3,week4,week5) values ('1','546','456','784','234','412');
+insert into employee (fname,lname,position,salary,store_id) values ('Colin','Jose','Cook','600','1');

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+<?import jerseymikes.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="570.0" prefWidth="511.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jerseymikes.MainController">
+    <children>
+        <TabPane layoutY="3.0" prefHeight="553.0" prefWidth="511.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Stores">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <SplitPane dividerPositions="0.4950980392156863" layoutX="3.0" layoutY="2.0" orientation="VERTICAL" prefHeight="506.0" prefWidth="503.0">
+                                    <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                            <children>
+                                                <TableView fx:id="tableS" layoutX="58.0" layoutY="-16.0" prefHeight="246.0" prefWidth="246.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="255.0" AnchorPane.topAnchor="0.0">
+                                                    <columns>
+                                                        <TableColumn prefWidth="121.0" text="Store_ID">
+                                                            <cellValueFactory>
+                                                        <PropertyValueFactory property="storeId" />
+                                                    </cellValueFactory>
+                                                    <cellFactory>
+                                                        <FormattedTableCellFactory alignment="center">
+                                                        </FormattedTableCellFactory>
+                                                    </cellFactory>
+                                                </TableColumn>
+                                                        <TableColumn prefWidth="122.0" text="StoreName">
+                                                            <cellValueFactory>
+                                                        <PropertyValueFactory property="storeName" />
+                                                    </cellValueFactory>
+                                                    <cellFactory>
+                                                        <FormattedTableCellFactory alignment="center">
+                                                        </FormattedTableCellFactory>
+                                                    </cellFactory>
+                                                </TableColumn>
+                                                    </columns>
+                                                </TableView>
+                                    <Button layoutX="321.0" layoutY="46.0" mnemonicParsing="false" onAction="#deleteStore" prefHeight="50.0" prefWidth="118.0" text="Remove" />
+                                    <Button layoutX="320.0" layoutY="123.0" mnemonicParsing="false" onAction="#loadStores" prefHeight="54.0" prefWidth="119.0" text="Load Stores" />
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="269.0" prefWidth="501.0">
+                                 <children>
+                                    <TextField fx:id="inputStore" layoutX="97.0" layoutY="53.0" />
+                                    <TextField fx:id="inputSName" layoutX="97.0" layoutY="98.0" />
+                                    <Button layoutX="277.0" layoutY="53.0" mnemonicParsing="false" onAction="#addStore" prefHeight="79.0" prefWidth="81.0" text="Add" />
+                                    <Button layoutX="277.0" layoutY="139.0" mnemonicParsing="false" onAction="#clearStore" prefHeight="27.0" prefWidth="81.0" text="Clear" />
+                                    <Label layoutX="14.0" layoutY="58.0" text="Store ID" />
+                                    <Label layoutX="14.0" layoutY="103.0" text="Store Name" />
+                                 </children></AnchorPane>
+                                    </items>
+                                </SplitPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Employee">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="497.0" prefWidth="524.0">
+                            <children>
+                                <SplitPane layoutX="21.0" layoutY="26.0" prefHeight="234.0" prefWidth="378.0">
+                                    <items>
+                                        <TableView fx:id="tableID" prefHeight="232.0" prefWidth="453.0">
+                                            <columns>
+                                                <TableColumn fx:id="firstName1" prefWidth="75.0" text="fName">
+                                                    <cellValueFactory>
+                                                        <PropertyValueFactory property="firstName" />
+                                                    </cellValueFactory>
+                                                    <cellFactory>
+                                                        <FormattedTableCellFactory alignment="center">
+                                                        </FormattedTableCellFactory>
+                                                    </cellFactory>
+                                                </TableColumn>
+                                                <TableColumn fx:id="lastName1" prefWidth="75.0" text="lName">
+                                                    <cellValueFactory>
+                                                        <PropertyValueFactory property="lastName" />
+                                                    </cellValueFactory>
+                                                    <cellFactory>
+                                                        <FormattedTableCellFactory alignment="center">
+                                                        </FormattedTableCellFactory>
+                                                    </cellFactory>
+                                                </TableColumn>
+                                                <TableColumn fx:id="positiont" prefWidth="75.0" text="Position">
+                                                    <cellValueFactory>
+                                                        <PropertyValueFactory property="position" />
+                                                    </cellValueFactory>
+                                                    <cellFactory>
+                                                        <FormattedTableCellFactory alignment="center">
+                                                        </FormattedTableCellFactory>
+                                                    </cellFactory>
+                                                </TableColumn>
+                                                <TableColumn fx:id="salary" prefWidth="75.0" text="Salary">
+                                                    <cellValueFactory>
+                                                        <PropertyValueFactory property="salary" />
+                                                    </cellValueFactory>
+                                                    <cellFactory>
+                                                        <FormattedTableCellFactory alignment="center">
+                                                        </FormattedTableCellFactory>
+                                                    </cellFactory>
+                                                </TableColumn>
+                                                <TableColumn fx:id="storeId1" prefWidth="75.0" text="Store_ID">
+                                                    <cellValueFactory>
+                                                        <PropertyValueFactory property="storeId" />
+                                                    </cellValueFactory>
+                                                    <cellFactory>
+                                                        <FormattedTableCellFactory alignment="center">
+                                                        </FormattedTableCellFactory>
+                                                    </cellFactory>
+                                                </TableColumn>
+                                            </columns>
+                                        </TableView>
+                                    </items>
+                                </SplitPane>
+                                <Pane layoutX="60.0" layoutY="250.0" prefHeight="260.0" prefWidth="380.0">
+                                    <children>
+                                        <TextField fx:id="inputFname" layoutX="75.0" layoutY="26.0" />
+                                        <Label layoutX="14.0" layoutY="31.0" text="fName" />
+                                        <TextField fx:id="inputLname" layoutX="75.0" layoutY="65.0" />
+                                        <Label layoutX="15.0" layoutY="74.0" prefHeight="0.0" prefWidth="39.0" text="lName" />
+                                        <TextField fx:id="inputPosition" layoutX="75.0" layoutY="104.0" />
+                                        <TextField fx:id="inputSalary" layoutX="75.0" layoutY="150.0" />
+                                        <Label layoutX="9.0" layoutY="109.0" text="Position" />
+                                        <Label layoutX="15.0" layoutY="155.0" text="Salary" />
+                                        <Button fx:id="addButton" layoutX="261.0" layoutY="74.0" mnemonicParsing="false" onAction="#addEmployee" prefHeight="87.0" prefWidth="81.0" text="Add">
+                                            <font>
+                                                <Font size="19.0" />
+                                            </font>
+                                        </Button>
+                                        <Label layoutX="15.0" layoutY="195.0" text="Store_ID" />
+                                        <TextField fx:id="inputStoreID" layoutX="75.0" layoutY="190.0" />
+                                        <Button layoutX="261.0" layoutY="182.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="27.0" prefWidth="78.0" text="Clear" />
+                                    </children>
+                                </Pane>
+                                <Button layoutX="425.0" layoutY="116.0" mnemonicParsing="false" onAction="#deleteEmployee" text="Remove" />
+                                <Button layoutX="416.0" layoutY="179.0" mnemonicParsing="false" onAction="#loadGraph" text="Load Table" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Sales">
+                    <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <Pane layoutX="62.0" layoutY="60.0" prefHeight="520.0" prefWidth="511.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <TableView fx:id="salesTable" layoutX="20.0" layoutY="46.0" prefHeight="200.0" prefWidth="462.0">
+                                            <columns>
+                                                <TableColumn prefWidth="75.0" text="Store_ID">
+                                                    <cellValueFactory>
+                                                        <PropertyValueFactory property="storeId" />
+                                                    </cellValueFactory>
+                                                    <cellFactory>
+                                                        <FormattedTableCellFactory alignment="center">
+                                                        </FormattedTableCellFactory>
+                                                    </cellFactory>
+                                                </TableColumn>
+                                                <TableColumn prefWidth="75.0" text="Week 1">
+                                                    <cellValueFactory>
+                                                        <PropertyValueFactory property="week1" />
+                                                    </cellValueFactory>
+                                                    <cellFactory>
+                                                        <FormattedTableCellFactory alignment="center">
+                                                        </FormattedTableCellFactory>
+                                                    </cellFactory>
+                                                </TableColumn>
+                                                <TableColumn prefWidth="75.0" text="Week 2">
+                                                    <cellValueFactory>
+                                                        <PropertyValueFactory property="week2" />
+                                                    </cellValueFactory>
+                                                    <cellFactory>
+                                                        <FormattedTableCellFactory alignment="center">
+                                                        </FormattedTableCellFactory>
+                                                    </cellFactory>
+                                                </TableColumn>
+                                                <TableColumn prefWidth="75.0" text="Week 3">
+                                                    <cellValueFactory>
+                                                        <PropertyValueFactory property="week3" />
+                                                    </cellValueFactory>
+                                                    <cellFactory>
+                                                        <FormattedTableCellFactory alignment="center">
+                                                        </FormattedTableCellFactory>
+                                                    </cellFactory>
+                                                </TableColumn>
+                                                <TableColumn prefWidth="75.0" text="Week 4">
+                                                    <cellValueFactory>
+                                                        <PropertyValueFactory property="week4" />
+                                                    </cellValueFactory>
+                                                    <cellFactory>
+                                                        <FormattedTableCellFactory alignment="center">
+                                                        </FormattedTableCellFactory>
+                                                    </cellFactory>
+                                                </TableColumn>
+                                                <TableColumn prefWidth="75.0" text="Week 5">
+                                                    <cellValueFactory>
+                                                        <PropertyValueFactory property="week5" />
+                                                    </cellValueFactory>
+                                                    <cellFactory>
+                                                        <FormattedTableCellFactory alignment="center">
+                                                        </FormattedTableCellFactory>
+                                                    </cellFactory>
+                                                </TableColumn>
+                                            </columns>
+                                        </TableView>
+                                        <Button layoutX="168.0" layoutY="260.0" mnemonicParsing="false" onAction="#loadSales" prefHeight="58.0" prefWidth="176.0" text="Load Sales" />
+                              <Label layoutX="179.0" layoutY="14.0" text="Store Sales By Week" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
